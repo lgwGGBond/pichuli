@@ -1,0 +1,21 @@
+import os
+import shutil
+
+def main():
+    # 在这里编写您的批处理任务
+    print("欢迎使用批处理Python脚本！")
+
+    # 创建一个文件夹并移动文件
+    if not os.path.exists("my_folder"):
+        os.makedirs("my_folder")
+        shutil.move("my_file.txt", "my_folder")
+
+    # 读取文件内容
+    with open("my_folder/my_file.txt", "r") as file:
+        content = file.read()
+        print("文件内容：")
+        print(content)
+
+    print("任务完成！")
+
+if __name__ == 
